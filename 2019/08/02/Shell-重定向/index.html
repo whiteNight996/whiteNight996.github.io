@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Shell,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="Shell输入输出重定向解析： 1nohup ./hiveserver2 &amp;gt; /opt/module/hive/logs/server.log 2&amp;gt;&amp;amp;1 &amp;amp;  nohub和&amp;amp;区别信号，是Unix系统中进程间通信的一种异步通信机制。 （1）SIGINT信号 （2）SIGHUB信号  Ctrl + C 产生SIGINT信号，关闭shell产生SIGHUB信号  &amp;a">
+<meta name="keywords" content="Shell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/07/25/hello-world/index.html">
+<meta property="og:title" content="Shell-重定向">
+<meta property="og:url" content="http://yoursite.com/2019/08/02/Shell-重定向/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Shell输入输出重定向解析： 1nohup ./hiveserver2 &amp;gt; /opt/module/hive/logs/server.log 2&amp;gt;&amp;amp;1 &amp;amp;  nohub和&amp;amp;区别信号，是Unix系统中进程间通信的一种异步通信机制。 （1）SIGINT信号 （2）SIGHUB信号  Ctrl + C 产生SIGINT信号，关闭shell产生SIGHUB信号  &amp;a">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-25T10:46:27.077Z">
+<meta property="og:updated_time" content="2019-08-02T11:11:06.782Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Shell-重定向">
+<meta name="twitter:description" content="Shell输入输出重定向解析： 1nohup ./hiveserver2 &amp;gt; /opt/module/hive/logs/server.log 2&amp;gt;&amp;amp;1 &amp;amp;  nohub和&amp;amp;区别信号，是Unix系统中进程间通信的一种异步通信机制。 （1）SIGINT信号 （2）SIGHUB信号  Ctrl + C 产生SIGINT信号，关闭shell产生SIGHUB信号  &amp;a">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/07/25/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/02/Shell-重定向/">
 
 
 
 
 
-  <title>Hello World | Hexo</title>
+  <title>Shell-重定向 | Hexo</title>
   
 
 
@@ -262,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/25/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/02/Shell-重定向/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -279,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">Shell-重定向</h1>
         
 
         <div class="post-meta">
@@ -291,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-25T18:46:27+08:00">
-                2019-07-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-02T19:10:15+08:00">
+                2019-08-02
               </time>
             
 
@@ -329,19 +330,83 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h2 id="Shell输入输出重定向"><a href="#Shell输入输出重定向" class="headerlink" title="Shell输入输出重定向"></a>Shell输入输出重定向</h2><p>解析：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup ./hiveserver2 &gt; /opt/module/hive/logs/server.log 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="nohub和-amp-区别"><a href="#nohub和-amp-区别" class="headerlink" title="nohub和&amp;区别"></a>nohub和&amp;区别</h3><p><strong>信号</strong>，是Unix系统中进程间通信的一种异步通信机制。</p>
+<p>（1）SIGINT信号</p>
+<p>（2）SIGHUB信号</p>
+<blockquote>
+<p>Ctrl + C 产生SIGINT信号，关闭shell产生SIGHUB信号</p>
+</blockquote>
+<p><strong>&amp;</strong>：命令后面加一个“&amp;”，表示后台运行</p>
+<blockquote>
+<p>&amp;只对SIGINT信号免疫，对SIGHUB信号不免疫</p>
+</blockquote>
+<p>也就是说，&amp;在你使用Ctrl + C 关闭时，进程依然存活；但如果你把shell窗口关闭，进程就会被杀死。</p>
+<p><strong>nohub</strong>：忽略SIGHUB信号</p>
+<p>单独使用nohub时，关闭窗口不会影响进程，但是Ctrl +C 操作会使得进程停止（对SIGHUB免疫，但是对SIGINT不免疫）。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>要想使进程不受shell窗口关闭 和 Ctrl + C操作的影响，可以将nohup和&amp;指令一起使用。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohub ./xxx脚本 ... &amp;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="重定向列表"><a href="#重定向列表" class="headerlink" title="重定向列表"></a>重定向列表</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>command &gt; file</td>
+<td>将输出重定向到 file</td>
+</tr>
+<tr>
+<td>command &lt; file</td>
+<td>将输入重定向到 file</td>
+</tr>
+<tr>
+<td>command &gt;&gt; file</td>
+<td>将输出以追加的方式重定向到 file</td>
+</tr>
+<tr>
+<td>n &gt; file</td>
+<td>将文件描述符为 n 的文件重定向到 file</td>
+</tr>
+<tr>
+<td>n &gt;&gt; file</td>
+<td>将文件描述符为 n 的文件以追加的方式重定向到 file</td>
+</tr>
+<tr>
+<td>n &gt;&amp; m</td>
+<td>将输出文件 m 和 n 合并</td>
+</tr>
+<tr>
+<td>n &lt;&amp; m</td>
+<td>将输入文件 m 和 n 合并</td>
+</tr>
+</tbody></table>
+<h4 id="重定向深入理解"><a href="#重定向深入理解" class="headerlink" title="重定向深入理解"></a>重定向深入理解</h4><p>一般情况下，每个Unix和Linux命令运行时都会打开三个文件：</p>
+<ul>
+<li>标准输入文件(stdin)：stdin的文件描述符为<strong>0</strong>，Unix程序默认从stdin读取数据。</li>
+<li>标准输出文件(stdout)：stdout 的文件描述符为<strong>1</strong>，Unix程序默认向stdout输出数据。</li>
+<li>标准错误文件(stderr)：stderr的文件描述符为<strong>2</strong>，Unix程序会向stderr流中写入错误信息</li>
+</ul>
+<p>默认情况下，command &gt; file 将 stdout 重定向到 file，command &lt; file 将stdin 重定向到 file。</p>
+<p>如果希望 stderr 重定向到 file，可以这样写：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> command 2 &gt; file</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p><strong>2</strong> 表示标准错误文件(stderr)。</p>
+<p>如果希望将 stdout 和 stderr 合并后重定向到 file，可以这样写：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> command &gt; file 2&gt;&amp;1</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> command &gt;&gt; file 2&gt;&amp;1</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h3 id="Linux-xargs命令"><a href="#Linux-xargs命令" class="headerlink" title="Linux xargs命令"></a>Linux xargs命令</h3><p>xargs 是给命令传递参数的一个过滤器，也是组合多个命令的一个工具。</p>
+<p>xargs 可以将管道或标准输入（stdin）数据转换成命令行参数，也能够从文件的输出中读取数据。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">somecommand |xargs -选项  command</span><br></pre></td></tr></table></figure>
+
+<p>xargs 结合 find 使用</p>
+<p>用 rm 删除太多的文件时候，可能得到一个错误信息：<strong>/bin/rm Argument list too long.</strong> 用 xargs 去避免这个问题：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -name "*.log" -print0 | xargs -0 rm -f</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -357,6 +422,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Shell/" rel="tag"># Shell</a>
+          
+        </div>
+      
 
       
       
@@ -366,15 +437,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/08/01/JDK1.8源码-ArrayList/" rel="next" title="JDK1.8源码-ArrayList">
+                <i class="fa fa-chevron-left"></i> JDK1.8源码-ArrayList
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/01/数据结构与算法-复杂度分析/" rel="prev" title="数据结构与算法-复杂度分析">
-                数据结构与算法-复杂度分析 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -515,7 +586,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Shell输入输出重定向"><span class="nav-number">1.</span> <span class="nav-text">Shell输入输出重定向</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#nohub和-amp-区别"><span class="nav-number">1.1.</span> <span class="nav-text">nohub和&amp;区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">1.1.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重定向列表"><span class="nav-number">1.2.</span> <span class="nav-text">重定向列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#重定向深入理解"><span class="nav-number">1.2.1.</span> <span class="nav-text">重定向深入理解</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux-xargs命令"><span class="nav-number">1.3.</span> <span class="nav-text">Linux xargs命令</span></a></li></ol></li></ol></div>
             
 
           </div>
