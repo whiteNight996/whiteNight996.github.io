@@ -84,10 +84,10 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="JDK1.8源码-ArrayList">
 <meta property="og:url" content="http://yoursite.com/2019/08/01/JDK1.8源码-ArrayList/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="大河之剑天上来">
 <meta property="og:description" content="ArrayList 源码解析（1）JDK1.8：new ArrayList()：发现内部初始化为了一个长度为0的空数组  DEFAULTCAPACITY_EMPTY_ELEMENTDATA ​    JDK1.7版本：也是初始化为长度为0的空数组  EMPTY_ELEMENTDATA; ​    JDK1.6版本：初始化为长度为10的数组 为什么要初始化为空数组呢？ 因为开发中，很多时候创建了Ar">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-01T08:50:41.057Z">
+<meta property="og:updated_time" content="2019-09-19T13:25:39.010Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JDK1.8源码-ArrayList">
 <meta name="twitter:description" content="ArrayList 源码解析（1）JDK1.8：new ArrayList()：发现内部初始化为了一个长度为0的空数组  DEFAULTCAPACITY_EMPTY_ELEMENTDATA ​    JDK1.7版本：也是初始化为长度为0的空数组  EMPTY_ELEMENTDATA; ​    JDK1.6版本：初始化为长度为10的数组 为什么要初始化为空数组呢？ 因为开发中，很多时候创建了Ar">
@@ -126,7 +126,7 @@
 
 
 
-  <title>JDK1.8源码-ArrayList | Hexo</title>
+  <title>JDK1.8源码-ArrayList | 大河之剑天上来</title>
   
 
 
@@ -156,7 +156,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">大河之剑天上来</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -266,13 +266,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/01/JDK1.8源码-ArrayList/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="十六夜_">
       <meta itemprop="description" content>
       <meta itemprop="image" content="/images/whiteNight996.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="大河之剑天上来">
     </span>
 
     
@@ -303,8 +303,40 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java内功心法/" itemprop="url" rel="index">
+                    <span itemprop="name">Java内功心法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/08/01/JDK1.8源码-ArrayList/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/01/JDK1.8源码-ArrayList/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -355,6 +387,30 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="十六夜_ 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
@@ -375,8 +431,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/01/数据结构与算法-数组/" rel="next" title="数据结构与算法-数组">
-                <i class="fa fa-chevron-left"></i> 数据结构与算法-数组
+              <a href="/2019/07/25/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -417,6 +473,9 @@
           
 
   
+    <div class="comments" id="comments">
+    </div>
+  
 
 
 
@@ -453,9 +512,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/whiteNight996.jpg" alt="John Doe">
+              <img class="site-author-image" itemprop="image" src="/images/whiteNight996.jpg" alt="十六夜_">
             
-              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-author-name" itemprop="name">十六夜_</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -466,12 +525,21 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
             
 
             
@@ -499,9 +567,9 @@
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="wxc.flying@gmail.com" target="_blank" title="E-Mail">
+                    <a href="https://plus.google.com/" target="_blank" title="Google">
                       
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                        <i class="fa fa-fw fa-google"></i>Google</a>
                   </span>
                 
             </div>
@@ -552,7 +620,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">十六夜_</span>
 
   
 </div>
@@ -723,6 +791,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'fWC1PA896cbu5xwbpBD14ko5-gzGzoHsz',
+        appKey: 'ACYYmD4rxAobHDU8QkNPqzVF',
+        placeholder: '请在此输入您的留言',
+        avatar:'/images/whiteNight996.jpg',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

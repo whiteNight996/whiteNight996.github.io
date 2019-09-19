@@ -80,12 +80,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="大河之剑天上来">
 <meta property="og:url" content="http://yoursite.com/tags/Shell/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="大河之剑天上来">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="大河之剑天上来">
 
 
 
@@ -121,7 +121,7 @@
 
 
 
-  <title>标签: Shell | Hexo</title>
+  <title>标签: Shell | 大河之剑天上来</title>
   
 
 
@@ -151,7 +151,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">大河之剑天上来</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -322,9 +322,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/whiteNight996.jpg" alt="John Doe">
+              <img class="site-author-image" itemprop="image" src="/images/whiteNight996.jpg" alt="十六夜_">
             
-              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-author-name" itemprop="name">十六夜_</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -335,12 +335,21 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
             
 
             
@@ -368,9 +377,9 @@
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="wxc.flying@gmail.com" target="_blank" title="E-Mail">
+                    <a href="https://plus.google.com/" target="_blank" title="Google">
                       
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                        <i class="fa fa-fw fa-google"></i>Google</a>
                   </span>
                 
             </div>
@@ -405,7 +414,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">十六夜_</span>
 
   
 </div>
@@ -572,6 +581,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'fWC1PA896cbu5xwbpBD14ko5-gzGzoHsz',
+        appKey: 'ACYYmD4rxAobHDU8QkNPqzVF',
+        placeholder: '请在此输入您的留言',
+        avatar:'/images/whiteNight996.jpg',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
