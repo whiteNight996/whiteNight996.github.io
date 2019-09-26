@@ -414,11 +414,11 @@
 </ul>
 <p>默认情况下，command &gt; file 将 stdout 重定向到 file，command &lt; file 将stdin 重定向到 file。</p>
 <p>如果希望 stderr 重定向到 file，可以这样写：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">command</span> 2 &gt; file</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> command 2 &gt; file</span><br></pre></td></tr></table></figure>
 
 <p><strong>2</strong> 表示标准错误文件(stderr)。</p>
 <p>如果希望将 stdout 和 stderr 合并后重定向到 file，可以这样写：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">command</span> &gt; file 2&gt;&amp;1</span></span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">command</span> &gt;&gt; file 2&gt;&amp;1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> command &gt; file 2&gt;&amp;1</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> command &gt;&gt; file 2&gt;&amp;1</span><br></pre></td></tr></table></figure>
 
 <h3 id="Linux-xargs命令"><a href="#Linux-xargs命令" class="headerlink" title="Linux xargs命令"></a>Linux xargs命令</h3><p>xargs 是给命令传递参数的一个过滤器，也是组合多个命令的一个工具。</p>
 <p>xargs 可以将管道或标准输入（stdin）数据转换成命令行参数，也能够从文件的输出中读取数据。</p>
@@ -583,7 +583,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="起因先说一下OCP开发原则，(Open Close Principle) 开闭原则的含义是说一个软件实体应该通过扩展来实现变化，而不是通过修改已有代码来实现变化。Scala中的隐式转换与之貌离神合：在不修改代码的情况下，让编译通过，和扩展功能类似。 举例说明，开发中我们经常会做版本的迭代更新，如果之前xxx0.1版本兼容性很好，在迭代xxx0.2版本中因为考虑欠妥导致某些功能不兼容，这时候难道要重">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/07/25/hello-world/index.html">
+<meta property="og:title" content="浅析Scala之隐式转换">
+<meta property="og:url" content="http://yoursite.com/2019/09/26/浅析Scala之隐式转换/index.html">
 <meta property="og:site_name" content="大河之剑天上来">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="起因先说一下OCP开发原则，(Open Close Principle) 开闭原则的含义是说一个软件实体应该通过扩展来实现变化，而不是通过修改已有代码来实现变化。Scala中的隐式转换与之貌离神合：在不修改代码的情况下，让编译通过，和扩展功能类似。 举例说明，开发中我们经常会做版本的迭代更新，如果之前xxx0.1版本兼容性很好，在迭代xxx0.2版本中因为考虑欠妥导致某些功能不兼容，这时候难道要重">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-19T13:25:03.867Z">
+<meta property="og:updated_time" content="2019-09-26T16:04:35.140Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="浅析Scala之隐式转换">
+<meta name="twitter:description" content="起因先说一下OCP开发原则，(Open Close Principle) 开闭原则的含义是说一个软件实体应该通过扩展来实现变化，而不是通过修改已有代码来实现变化。Scala中的隐式转换与之貌离神合：在不修改代码的情况下，让编译通过，和扩展功能类似。 举例说明，开发中我们经常会做版本的迭代更新，如果之前xxx0.1版本兼容性很好，在迭代xxx0.2版本中因为考虑欠妥导致某些功能不兼容，这时候难道要重">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/07/25/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/26/浅析Scala之隐式转换/">
 
 
 
 
 
-  <title>Hello World | 大河之剑天上来</title>
+  <title>浅析Scala之隐式转换 | 大河之剑天上来</title>
   
 
 
@@ -262,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/25/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/26/浅析Scala之隐式转换/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="肖申克_">
@@ -279,7 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">浅析Scala之隐式转换</h1>
         
 
         <div class="post-meta">
@@ -291,8 +291,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-25T18:46:27+08:00">
-                2019-07-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-26T23:16:59+08:00">
+                2019-09-26
               </time>
             
 
@@ -310,8 +310,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/07/25/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/07/25/hello-world/" itemprop="commentCount"></span>
+                <a href="/2019/09/26/浅析Scala之隐式转换/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/26/浅析Scala之隐式转换/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -319,7 +319,7 @@
 
           
           
-             <span id="/2019/07/25/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
+             <span id="/2019/09/26/浅析Scala之隐式转换/" class="leancloud_visitors" data-flag-title="浅析Scala之隐式转换">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -350,20 +350,33 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h4 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h4><p>先说一下OCP开发原则，(Open Close Principle)</p>
+<p>开闭原则的含义是说一个软件实体应该通过扩展来实现变化，而不是通过修改已有代码来实现变化。<br>Scala中的隐式转换与之貌离神合：在不修改代码的情况下，让编译通过，和扩展功能类似。</p>
+<pre><code>举例说明，开发中我们经常会做版本的迭代更新，如果之前xxx0.1版本兼容性很好，在迭代xxx0.2版本中因为考虑欠妥导致某些功能不兼容，这时候难道要重写整个xxx0.2版本吗？</code></pre><p>这个问题本身要解决的，就是想办法让xxx0.2版本jar包不变情况下，程序可以正常工作。<br>事实上，我们要做的就是将相关依赖的jar包更新。</p>
+<h4 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h4><p>Scala编译器在编译代码时发生错误（<code>第一次</code>），然后编译器会在指定的范围内查找对应的转换规则，看是否能再次通过，Scala将这种操作<br>称为<code>隐式转换</code></p>
+<p>应用：Java中借鉴了这种思想。比如在Java中对象之间转换，需要有父子（继承）关系；但是基本数据类型之间也可以进行转换，其实背后是<br>由编译器完成的。</p>
+<pre><code>Tips：编译器帮你做的事，不违背OCP开发原则。</code></pre><h4 id="隐式解析机制"><a href="#隐式解析机制" class="headerlink" title="隐式解析机制"></a>隐式解析机制</h4><p>（1）首先会在当前代码作用域下查找隐式实体（隐式方法、隐式类、隐式对象）。<br>（2）如果第一条规则查找隐式实体失败，会继续在隐式参数的类型的作用域里查找。类型的作用域是指与该类型相关联的全部伴生对象以及该类型所在包的包对象。</p>
+<pre><code>Tips：同一作用域如果出现两个或以上的功能类似的隐式转换，就会报错，即隐式转换中不存在动态绑定。</code></pre><h4 id="Scala中具体实现"><a href="#Scala中具体实现" class="headerlink" title="Scala中具体实现"></a>Scala中具体实现</h4><p>普通方法或者函数可以通过implicit关键字声明隐式参数，调用该方法时，就可以传入该参数，编译器会再相应的作用域寻找符合条件的隐式值。</p>
+<p>（1）隐式函数</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]): <span class="type">Unit</span> = &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//定义一个隐式函数</span></span><br><span class="line">    <span class="keyword">implicit</span> <span class="function"><span class="keyword">def</span> <span class="title">tansform</span></span>(d:<span class="type">Double</span>):<span class="type">Int</span> =&#123;</span><br><span class="line">        d.toInt</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> i :<span class="type">Int</span> = <span class="number">5.0</span> <span class="comment">//正常情况下会报错,在添加完隐式函数就编译通过了</span></span><br><span class="line">    println(i)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>(2)隐式参数</p>
+<ul>
+<li>同一个作用域中，相同类型的隐式值只能有一个</li>
+<li>编译器按照隐式参数的类型去寻找对应类型的隐式值，与隐式值的名称无关。</li>
+<li>隐式参数优先于默认参数</li>
+</ul>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">regUser</span></span>(<span class="keyword">implicit</span> pwd:<span class="type">String</span> = <span class="string">"123456"</span>):<span class="type">Unit</span> = &#123; <span class="comment">//默认情况下，登录用户密码是123456,设置隐式参数</span></span><br><span class="line">        println(<span class="string">"PWD:"</span> + pwd)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//隐式变量</span></span><br><span class="line">    <span class="keyword">implicit</span> <span class="keyword">val</span> password = <span class="string">"admin"</span></span><br><span class="line">    regUser <span class="comment">//使用隐式参数或变量时，调用要省略（）</span></span><br><span class="line">    <span class="comment">//输出结果：PWD:admin</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>(3)隐式类<br>在Scala2.10后提供了隐式类，可以使用implicit声明类，隐式类的非常强大，同样可以扩展类的功能，在集合中隐式类会发挥重要的作用。</p>
+<ul>
+<li>其所带的构造参数有且只能有一个</li>
+<li>隐式类必须被定义在“类”或“伴生对象”或“包对象”里，即隐式类不能是顶级的</li>
+</ul>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]): <span class="type">Unit</span> = &#123;</span><br><span class="line">        <span class="keyword">var</span> a = <span class="keyword">new</span> <span class="type">A</span></span><br><span class="line">        a.insertData()</span><br><span class="line">        a.updateData()</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">insertData</span></span>()=&#123;</span><br><span class="line">            println(<span class="string">"insert data ..."</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">implicit</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span>(<span class="params">a:<span class="type">A</span></span>)</span>&#123; <span class="comment">//隐式类</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">updateData</span></span>()=&#123;</span><br><span class="line">            println(<span class="string">"update data ..."</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+<hr>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hope is good thing, maybe the best of things. And no good thing ever dies。 --&lt;肖申克的救赎&gt;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -411,15 +424,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/09/24/踩坑-自动拆箱触发空指针异常/" rel="next" title="踩坑-自动拆箱触发空指针异常">
+                <i class="fa fa-chevron-left"></i> 踩坑-自动拆箱触发空指针异常
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/01/JDK1.8源码-ArrayList/" rel="prev" title="JDK1.8源码-ArrayList">
-                JDK1.8源码-ArrayList <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -593,7 +606,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#起因"><span class="nav-number">1.</span> <span class="nav-text">起因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#是什么"><span class="nav-number">2.</span> <span class="nav-text">是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#隐式解析机制"><span class="nav-number">3.</span> <span class="nav-text">隐式解析机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Scala中具体实现"><span class="nav-number">4.</span> <span class="nav-text">Scala中具体实现</span></a></li></ol></div>
             
 
           </div>
@@ -764,9 +777,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2019/07/25/hello-world/';
-          this.page.identifier = '2019/07/25/hello-world/';
-          this.page.title = 'Hello World';
+          this.page.url = 'http://yoursite.com/2019/09/26/浅析Scala之隐式转换/';
+          this.page.identifier = '2019/09/26/浅析Scala之隐式转换/';
+          this.page.title = '浅析Scala之隐式转换';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://.disqus.com/embed.js';
