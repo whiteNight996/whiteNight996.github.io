@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="大河之剑天上来">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="MR之所以慢是因为每一次操作数据都写在了磁盘上，大量的IO造成了时间和资源的浪费，但是Spark是基于内存的计算引擎，相比MR，减少的是大量的IO； 但并不是说给一个Spark程序足够的资源，就可以为所欲为了，在提交一个spark程序时，不仅要考虑所在资源队列的总体情况，还要考虑代码本身的高效性，要尽量避免大量的shuffle操作和action操作，尽量使用同一个rdd。 1bin/spark-s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spark提交参数说明和常见优化">
+<meta property="og:url" content="http://yoursite.com/2019/11/26/Spark提交参数说明和常见优化/index.html">
 <meta property="og:site_name" content="大河之剑天上来">
+<meta property="og:description" content="MR之所以慢是因为每一次操作数据都写在了磁盘上，大量的IO造成了时间和资源的浪费，但是Spark是基于内存的计算引擎，相比MR，减少的是大量的IO； 但并不是说给一个Spark程序足够的资源，就可以为所欲为了，在提交一个spark程序时，不仅要考虑所在资源队列的总体情况，还要考虑代码本身的高效性，要尽量避免大量的shuffle操作和action操作，尽量使用同一个rdd。 1bin/spark-s">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-26T01:08:57.363Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="大河之剑天上来">
+<meta name="twitter:title" content="Spark提交参数说明和常见优化">
+<meta name="twitter:description" content="MR之所以慢是因为每一次操作数据都写在了磁盘上，大量的IO造成了时间和资源的浪费，但是Spark是基于内存的计算引擎，相比MR，减少的是大量的IO； 但并不是说给一个Spark程序足够的资源，就可以为所欲为了，在提交一个spark程序时，不仅要考虑所在资源队列的总体情况，还要考虑代码本身的高效性，要尽量避免大量的shuffle操作和action操作，尽量使用同一个rdd。 1bin/spark-s">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/">
+  <link rel="canonical" href="http://yoursite.com/2019/11/26/Spark提交参数说明和常见优化/">
 
 
 
 
 
-  <title>归档 | 大河之剑天上来</title>
+  <title>Spark提交参数说明和常见优化 | 大河之剑天上来</title>
   
 
 
@@ -140,7 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,387 +248,215 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/26/Spark提交参数说明和常见优化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="肖申克_">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/whiteNight996.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大河之剑天上来">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Spark提交参数说明和常见优化</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-26T09:08:19+08:00">
+                2019-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 10 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/11/26/Spark提交参数说明和常见优化/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/11/26/Spark提交参数说明和常见优化/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-        
+          
+          
+             <span id="/2019/11/26/Spark提交参数说明和常见优化/" class="leancloud_visitors" data-flag-title="Spark提交参数说明和常见优化">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/26/Spark提交参数说明和常见优化/" itemprop="url">
-              
-                <span itemprop="name">Spark提交参数说明和常见优化</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-11-26T09:08:19+08:00" content="2019-11-26">
-          11-26
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/25/数据仓库建模/" itemprop="url">
-              
-                <span itemprop="name">数据仓库建模</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-11-25T19:41:16+08:00" content="2019-11-25">
-          11-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/26/浅析Scala之隐式转换/" itemprop="url">
-              
-                <span itemprop="name">浅析Scala之隐式转换</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-26T23:16:59+08:00" content="2019-09-26">
-          09-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <p>MR之所以慢是因为每一次操作数据都写在了磁盘上，大量的IO造成了时间和资源的浪费，但是Spark是基于内存的计算引擎，相比MR，减少的是大量的IO；</p>
+<p>但并不是说给一个Spark程序足够的资源，就可以为所欲为了，在提交一个spark程序时，不仅要考虑所在资源队列的总体情况，还要考虑代码本身的高效性，要尽量避免大量的shuffle操作和action操作，尽量使用同一个rdd。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/spark-submit --help</span><br></pre></td></tr></table></figure>
 
-        
-        
+<ol>
+<li>Spark提交任务时常见的两种模式</li>
+</ol>
+<p>1）local/local[K]</p>
+<p>本地使用1/K个 worker 线程运行 spark 程序；</p>
+<p>2）yarn-client/yarn-cluster</p>
+<p>以client/cluster方式连接到YARN集群，集群的定位由环境变量HADOOP_CONF_DIR定义，该方式driver在client/cluster运行。</p>
+<p>在提交任务时的几个重要参数</p>
+<p>executor-cores —— 每个executor使用的内核数，默认为1，官方建议2-5个；<br>num-executors —— 启动executors的数量，默认为2；<br>executor-memory —— executor内存大小，默认1G；<br>driver-cores —— driver使用内核数，默认为1；<br>driver-memory —— driver内存大小，默认512M。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">spark-submit \</span><br><span class="line">  --master local[5]  \</span><br><span class="line">  --driver-cores 2   \</span><br><span class="line">  --driver-memory 8g \</span><br><span class="line">  --executor-cores 4 \</span><br><span class="line">  --num-executors 10 \</span><br><span class="line">  --executor-memory 8g \</span><br><span class="line">  --class PackageName.ClassName XXXX.jar \</span><br><span class="line">  --name "Spark Job Name" \</span><br><span class="line">  InputPath      \</span><br><span class="line">  OutputPath</span><br><span class="line"></span><br><span class="line">如果这里通过--queue 指定了队列，那么可以免去写--master</span><br></pre></td></tr></table></figure>
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/23/JDK1-8源码分析-HashMap/" itemprop="url">
-              
-                <span itemprop="name">JDK1.8源码分析-HashMap</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-23T20:57:01+08:00" content="2019-09-23">
-          09-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+<p>常规注意事项</p>
+<ul>
+<li><p>预处理数据，丢掉一些不必要的数据；</p>
+</li>
+<li><p>增加Task的数量；</p>
+</li>
+<li><p>过滤掉一些容易导致发生倾斜的key；</p>
+</li>
+<li><p>避免创建重复的RDD，尽可能复用一个RDD，对多次使用的RDD进行持久化；</p>
+</li>
+<li><p>在要使用groupByKey算子的时候,尽量用reduceByKey或者aggregateByKey算子替代.因为调用groupByKey时候,按照相同的key进行分组,形成RDD[key,Iterable[value]]的形式,此时所有的键值对都将被重新洗牌,移动,对网络数据传输造成理论上的最大影响；</p>
+</li>
+<li><p>使用高性能的算子。</p>
+</li>
+</ul>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/23/Java-JVM是如何加载类的/" itemprop="url">
-              
-                <span itemprop="name">Java-JVM是如何加载类的?</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-23T00:02:37+08:00" content="2019-09-23">
-          09-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/22/Java-类初始化和实例初始化过程/" itemprop="url">
-              
-                <span itemprop="name">Java-类初始化和实例初始化过程</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-22T22:50:50+08:00" content="2019-09-22">
-          09-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/20/Hadoop分布式文件系统/" itemprop="url">
-              
-                <span itemprop="name">Hadoop分布式文件系统</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-20T08:31:18+08:00" content="2019-09-20">
-          09-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/02/Shell-重定向/" itemprop="url">
-              
-                <span itemprop="name">Shell-重定向</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-02T19:10:15+08:00" content="2019-08-02">
-          08-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/01/JDK1.8源码-ArrayList/" itemprop="url">
-              
-                <span itemprop="name">JDK1.8源码-ArrayList</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-01T16:48:56+08:00" content="2019-08-01">
-          08-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/07/25/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-25T18:46:27+08:00" content="2019-07-25">
-          07-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="肖申克_ 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/25/数据仓库建模/" rel="next" title="数据仓库建模">
+                <i class="fa fa-chevron-left"></i> 数据仓库建模
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -632,6 +464,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -886,6 +732,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -903,6 +753,18 @@
       <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2019/11/26/Spark提交参数说明和常见优化/';
+          this.page.identifier = '2019/11/26/Spark提交参数说明和常见优化/';
+          this.page.title = 'Spark提交参数说明和常见优化';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
